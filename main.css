@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    height: 650px;
+    background-color: rgb(71, 239, 197);
+}
+.round{
+    width: 40px;
+    height: 40px;
+    background-color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    transform: rotateX(0)  rotateY(0) rotateZ(0);
+    animation-name: round;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function:unset;
+}
+@keyframes round{
+    50%{
+        width: 100px;
+        height: 100px;
+        border-radius: 0%;
+       
+    }
+    65%{
+        width: 100px;
+        height: 100px;
+        border-radius: 5%;
+    }
+    100%{
+        width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    transform: rotateX(0)  rotateY(0) rotateZ(360deg) ;
+    }
+}
